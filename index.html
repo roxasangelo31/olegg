@@ -2,95 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Cyra Jane 💜</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Georgia', serif;
-        background: linear-gradient(135deg, #f8e1ff, #e0bbff, #d291ff);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-    }
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f8e1ff, #e0bbff, #d291ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
 
-    body::before {
-        content: "🌷 🌸 🌷 🌺 🌷 🌸";
-        position: absolute;
-        font-size: 80px;
-        opacity: 0.08;
-        top: 10%;
-        left: 5%;
-        transform: rotate(-20deg);
-    }
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.6;
+}
 
-    body::after {
-        content: "🌸 🌷 🌸 🌷 🌺";
-        position: absolute;
-        font-size: 80px;
-        opacity: 0.08;
-        bottom: 10%;
-        right: 5%;
-        transform: rotate(20deg);
-    }
+@keyframes floatUp {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
 
-    .card {
-        background: white;
-        width: 650px;
-        padding: 50px;
-        border-radius: 25px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        text-align: center;
-    }
+.card {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
 
-    h1 {
-        color: #8e44ad;
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-    p {
-        font-size: 18px;
-        color: #555;
-        margin-bottom: 30px;
-        line-height: 1.6;
-    }
+h1 {
+    color: #8e44ad;
+    font-size: 26px;
+}
 
-    .btn {
-        padding: 12px 28px;
-        font-size: 16px;
-        margin: 15px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+}
 
-    .yes {
-        background-color: #9b59b6;
-        color: white;
-    }
+.btn {
+    padding: 12px 28px;
+    font-size: 16px;
+    margin: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    .yes:hover {
-        background-color: #8e44ad;
-        transform: scale(1.1);
-    }
+.yes {
+    background-color: #9b59b6;
+    color: white;
+    box-shadow: 0 0 15px rgba(155,89,182,0.6);
+}
 
-    .no {
-        background-color: #eee;
-        color: #8e44ad;
-        position: absolute;
-    }
+.yes:hover {
+    transform: scale(1.15);
+    background-color: #8e44ad;
+}
 
-    #message {
-        margin-top: 20px;
-        font-weight: bold;
-        color: #9b59b6;
-        font-size: 20px;
-    }
+.no {
+    background-color: #eee;
+    color: #8e44ad;
+    position: absolute;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #9b59b6;
+    font-size: 20px;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 </style>
 </head>
 
@@ -99,11 +105,11 @@
 <div class="card">
     <h1>Cyra Jane Bancil, Will You Be My Valentine? 💜🌷</h1>
     <p>
-        Love,<br><br>
-        2 years na pero parang first day pa rin kitang minamahal.<br>
-        Araw-araw akong nagpapasalamat kasi ikaw yung pinili kong mahalin — at pinili mo rin ako.<br><br>
-        Yung pagiging caring mo, yung lambing mo, at yung pagmamahal mo…<br>
-        hindi ko ipagpapalit sa kahit ano. 💖
+        Love,<br>
+        2 years na pero parang first day pa rin kitang minamahal.
+        Araw-araw akong nagpapasalamat kasi ikaw yung pinili kong mahalin — at pinili mo rin ako.
+        Yung pagiging caring mo, yung lambing mo, at yung pagmamahal mo…
+        hindi ko ipagpapalit sa kahit ano. 💖 <br> ILOVEYOU LOVEY
     </p>
 
     <button class="btn yes" onclick="showLove()">Yes, of course 💖</button>
@@ -115,7 +121,7 @@
 <script>
 function showLove() {
     document.getElementById("message").innerHTML =
-        "You just made me the happiest person alive 💜🌷✨";
+        "YEYY SEE YOU TOMMORROW! 💜🌷✨ I love you always!";
 }
 
 function moveButton() {
@@ -123,6 +129,20 @@ function moveButton() {
     btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
     btn.style.top = Math.random() * (window.innerHeight - 50) + "px";
 }
+
+/* Create floating hearts */
+setInterval(function() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💜";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}, 500);
 </script>
 
 </body>
