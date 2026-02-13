@@ -109,125 +109,11 @@ p {
 <body>
 
 <div class="card">
-    <h1>Cyra Jane Bancil, Will You Be My Valentine? 💜🌷</h1>
+    <h1>Cyra Jane Bancil, <br> Will You Be My Valentine? 💜🌷</h1>
     <p id="typewriter"></p>
 
-    <button class="btn yes" onclick="showLove()">Yes <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Cyra Jane 💜</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #f8e1ff, #e0bbff, #d291ff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Floating Hearts */
-.heart {
-    position: absolute;
-    font-size: 20px;
-    animation: floatUp 6s linear infinite;
-    opacity: 0.6;
-}
-
-@keyframes floatUp {
-    0% { transform: translateY(100vh); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(-10vh); opacity: 0; }
-}
-
-.card {
-    background: white;
-    width: 90%;
-    max-width: 650px;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    text-align: center;
-    animation: fadeIn 2s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-h1 {
-    color: #8e44ad;
-    font-size: 26px;
-}
-
-p {
-    font-size: 17px;
-    color: #555;
-    min-height: 120px;
-}
-
-.btn {
-    padding: 12px 28px;
-    font-size: 16px;
-    margin: 15px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.yes {
-    background-color: #9b59b6;
-    color: white;
-    box-shadow: 0 0 15px rgba(155,89,182,0.6);
-}
-
-.yes:hover {
-    transform: scale(1.15);
-    background-color: #8e44ad;
-}
-
-.no {
-    background-color: #eee;
-    color: #8e44ad;
-    position: absolute;
-}
-
-#message {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #9b59b6;
-    font-size: 20px;
-}
-
-/* Confetti */
-.confetti {
-    position: absolute;
-    font-size: 20px;
-    animation: fall 3s linear forwards;
-}
-
-@keyframes fall {
-    0% { transform: translateY(-10vh) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
-}
-</style>
-</head>
-
-<body>
-
-<div class="card">
-    <h1>Cyra Jane Bancil, Will You Be My Valentine? 💜🌷</h1>
-    <p id="typewriter"></p>
-
-    <button class="btn yes" onclick="showLove()">YES 💗💗</button>
-    <button class="btn no" onmouseover="moveButton()" id="noBtn">No 😜</button>
+    <button class="btn yes" onclick="showLove()"> YES 💗💗 </button>
+    <button class="btn no" onmouseover="moveButton()" id="noBtn"> NO 😜</button>
 
     <div id="message"></div>
 </div>
@@ -239,7 +125,7 @@ p {
 
 <script>
 /* Typewriter Effect */
-const text = "Love,\n\n2 years na pero parang first day pa rin kitang minamahal.\nAraw-araw akong nagpapasalamat kasi ikaw yung pinili kong mahalin at pinili mo rin ako.\n\nYung pagiging caring mo, yung lambing mo, at yung pagmamahal mo,hindi ko ipagpapalit yan sa kahit kanino kasi sayo lang ako.💗 Walang makakatumbas ng pag mahahal na binigay mo sakin palaging ikaw at ikaw pa din ang pipiliin ko! \n ILOVEYOUUU LOVEY!! 💗 ";
+const text = "Hello love,\n\n Grabe 2 years na tayo pero parang first day pa rin kitang minamahal.\nAraw-araw akong nagpapasalamat kasi ikaw yung pinili kong mahalin at pinili mo rin ako.\n\n Gusto ko yung pagiging caring mo, yung pagiging malambing mo, at yung pagmamahal mo para sakin, hindi ko yan ipagpapalit sa kahit kanino man kasi sayo lang ako.💗 Walang makakatumbas ng pag mamahal na binigay mo sakin. Palaging ikaw at ikaw pa din ang pipiliin ko! \n ILOVEYOUUU LOVEY!! 💗";
 let i = 0;
 
 function typeWriter() {
@@ -262,76 +148,7 @@ function moveButton() {
 /* YES Button */
 function showLove() {
     document.getElementById("message").innerHTML =
-        "YEYY! SEE YOU TOMMORROW LOVEY!!💜🌷✨ I love you always!";
-
-    document.getElementById("bgMusic").play();
-    launchConfetti();
-}
-
-/* Floating Hearts */
-setInterval(function() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "💜";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 6000);
-}, 500);
-
-/* Confetti */
-function launchConfetti() {
-    for (let i = 0; i < 40; i++) {
-        const confetti = document.createElement("div");
-        confetti.classList.add("confetti");
-        confetti.innerHTML = "🎉";
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
-        document.body.appendChild(confetti);
-        setTimeout(() => confetti.remove(), 3000);
-    }
-}
-</script>
-
-</body>
-</html>
-</button>
-    <button class="btn no" onmouseover="moveButton()" id="noBtn">No 😜</button>
-
-    <div id="message"></div>
-</div>
-
-<!-- Background Music (royalty free sample link) -->
-<audio id="bgMusic" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-/* Typewriter Effect */
-const text = "Love,\n\n2 years na pero parang first day pa rin kitang minamahal.\nAraw-araw akong nagpapasalamat kasi ikaw yung pinili kong mahalin at pinili mo rin ako.\n\nYung pagiging caring mo, yung lambing mo, at yung pagmamahal mo,hindi ko ipagpapalit yan sa kahit kanino kasi sayo lang ako.💗 Walang makakatumbas ng pag mahahal na binigay mo sakin palaging ikaw at ikaw pa din ang pipiliin ko! \n ILOVEYOUUU LOVEY!! 💗 ";
-let i = 0;
-
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("typewriter").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 40);
-    }
-}
-
-typeWriter();
-
-/* Move NO Button */
-function moveButton() {
-    var btn = document.getElementById("noBtn");
-    btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
-    btn.style.top = Math.random() * (window.innerHeight - 50) + "px";
-}
-
-/* YES Button */
-function showLove() {
-    document.getElementById("message").innerHTML =
-        "YEYY! SEE YOU TOMMORROW LOVEY!!💜🌷✨ I love you always!";
+        "You just made me the happiest person alive 💜🌷✨ I love you always!";
 
     document.getElementById("bgMusic").play();
     launchConfetti();
